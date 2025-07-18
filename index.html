@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+<style>
+  body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background: #f6fdf6;
+    color: #333;
+    line-height: 1.6;
+  }
+
+  header {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(120deg, #a8e063, #56ab2f);
+    color: white;
+    border-radius: 0 0 20px 20px;
+  }
+
+  section {
+    padding: 60px 20px;
+    max-width: 1100px;
+    margin: auto;
+  }
+
+  h2 {
+    font-weight: 600;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .card {
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.07);
+    padding: 20px;
+    margin-bottom: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.12);
+  }
+
+  footer {
+    background: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px 20px 0 0;
+  }
+
+  a, button {
+    transition: all 0.3s ease;
+  }
+
+  button:hover {
+    opacity: 0.9;
+  }
+
+  input, button {
+    font-family: inherit;
+  }
+</style>
+
+<style>
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+    border-radius: 16px;
+    margin: 30px auto 0 auto;
+    max-width: 1000px;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #2e7d32;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  nav a:hover {
+    background-color: #e8f5e9;
+  }
+
+  button, .btn {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  button:hover, .btn:hover {
+    background-color: #256b2a;
+  }
+</style>
+
+
+<!-- Favicon for all browsers -->
+<link href="https://img.icons8.com/emoji/48/deciduous-tree-emoji.png" rel="icon" type="image/png"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Neem Tree Project</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<style>
+      :root {
+        --green-dark: #2e7d32;
+        --green-light: #c8e6c9;
+        --green-mid: #66bb6a;
+        --text-dark: #1b5e20;
+      }
+      * {
+        box-sizing: border-box;
+        scroll-behavior: smooth;
+      }
+      body {
+        margin: 0;
+        font-family: 'Poppins', sans-serif;
+        background: linear-gradient(to right, #f1fff1, #e9fbe9);
+        color: var(--text-dark);
+      }
+      header {
+        background: var(--green-dark);
+        color: white;
+        padding: 30px 20px;
+        text-align: center;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+        animation: fadeSlideDown 1s ease;
+      }
+      nav {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        background: #ffffff;
+        padding: 15px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        animation: fadeIn 1.5s ease;
+      }
+      nav a {
+        text-decoration: none;
+        color: var(--green-dark);
+        font-weight: 600;
+        transition: color 0.3s;
+      }
+      nav a:hover {
+        color: var(--green-mid);
+      }
+      .section {
+        max-width: 960px;
+        margin: 60px auto;
+        padding: 30px;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.07);
+        animation: fadeUp 1s ease;
+      }
+      h2, h3 {
+        color: var(--green-dark);
+        margin-bottom: 15px;
+      }
+      .video-wrapper {
+        width: 100%;
+        height: auto;
+        overflow: hidden;
+        border-radius: 16px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+      .video-wrapper video {
+    width: 100%;
+  max-height: 480px; /* or 360px if you want shorter */
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 16px;
+      }
+      ul li {
+        margin-bottom: 10px;
+        line-height: 1.6;
+      }
+      .extra-section {
+        background: #ffffff;
+        border-radius: 16px;
+        padding: 30px;
+        margin: 60px auto;
+        max-width: 960px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+        animation: fadeUp 1s ease-in-out;
+      }
+      .testimonials {
+        background: #f0f9f0;
+        padding: 40px;
+        border-radius: 20px;
+        max-width: 960px;
+        margin: 60px auto;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+      }
+      .testimonials blockquote {
+        font-style: italic;
+        border-left: 4px solid var(--green-mid);
+        margin: 20px 0;
+        padding-left: 20px;
+      }
+      .social-icons {
+        margin-top: 20px;
+      }
+      .social-icons a {
+        display: inline-block;
+        margin: 0 10px;
+        color: white;
+        font-size: 20px;
+        transition: transform 0.3s;
+      }
+      .social-icons a:hover {
+        transform: scale(1.2);
+      }
+      #backToTop {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: var(--green-dark);
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 50%;
+        font-size: 20px;
+        cursor: pointer;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+        display: none;
+      }
+      footer {
+        background: var(--green-dark);
+        color: white;
+        text-align: center;
+        padding: 25px;
+        margin-top: 80px;
+        animation: fadeIn 2s ease;
+      }
+      @keyframes fadeSlideDown {
+        0% { opacity: 0; transform: translateY(-40px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes fadeUp {
+        0% { opacity: 0; transform: translateY(30px); }
+        100% { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
+      }
+    
+      body.dark {
+        background: linear-gradient(to right, #1a1a1a, #333);
+        color: #f0f0f0;
+      }
+      body.dark .section,
+      body.dark .extra-section,
+      body.dark .testimonials {
+        background: #222;
+        color: #ddd;
+      }
+      body.dark nav {
+        background: #111;
+      }
+      body.dark footer {
+        background: #111;
+      }
+      body.dark nav a {
+        color: #f0f0f0;
+      }
+      body.dark nav a:hover {
+        color: var(--green-light);
+      }
+    </style>
+
+<style>
+  nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 24px;
+    padding: 20px;
+    background: white;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+    border-radius: 16px;
+    margin: 30px auto 0 auto;
+    max-width: 1000px;
+  }
+
+  nav a {
+    text-decoration: none;
+    color: #2e7d32;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+
+  nav a:hover {
+    background-color: #e8f5e9;
+  }
+
+  button, .btn {
+    background-color: #2e7d32;
+    color: white;
+    border: none;
+    padding: 10px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  button:hover, .btn:hover {
+    background-color: #256b2a;
+  }
+</style>
+
+
+<!-- AOS Animation Library -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    AOS.init({ once: true, duration: 700 });
+  });
+</script>
+
+
+<style>
+  /* Ensure container scaling and prevent overflow */
+  html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+  }
+
+  section, header, footer {
+    padding-left: 5vw;
+    padding-right: 5vw;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .card {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* Responsive fixes */
+  @media (max-width: 768px) {
+    nav {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header h1, header p {
+      font-size: 6vw;
+      text-align: center;
+    }
+
+    h2 {
+      font-size: 5.5vw;
+      text-align: center;
+    }
+
+    .card {
+      margin-bottom: 20px;
+      padding: 16px;
+    }
+
+    #chatbotWindow {
+      width: 90% !important;
+      right: 5% !important;
+      bottom: 90px !important;
+    }
+
+    #chatbotToggle {
+      width: 52px;
+      height: 52px;
+      font-size: 24px;
+      right: 16px !important;
+      bottom: 20px !important;
+    }
+
+    footer {
+      font-size: 14px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    header h1 {
+      font-size: 7vw;
+    }
+
+    nav a {
+      font-size: 14px;
+    }
+
+    #chatbotInput {
+      font-size: 13px;
+    }
+  }
+</style>
+
+
+<!-- AOS Animation -->
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    AOS.init({ duration: 700, once: true });
+  });
+</script>
+
+<style>
+  nav a, button, .btn, #chatbotToggle {
+    transition: all 0.3s ease;
+  }
+
+  nav a:hover {
+    transform: scale(1.05);
+    background-color: #e0f5e9;
+  }
+
+  button:hover, .btn:hover, #chatbotToggle:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.08);
+  }
+</style>
+
+
+<style>
+  @media (max-width: 768px) {
+    .card {
+      width: 100% !important;
+    }
+    .input-container,
+    #chatbotWindow,
+    footer {
+      flex-direction: column;
+      padding: 20px;
+    }
+  }
+  .dark-mode input,
+  .dark-mode textarea {
+    background-color: #222 !important;
+    color: #fff;
+    border: 1px solid #555;
+  }
+  .dark-mode #chatbotWindow {
+    background: #1a1a1a !important;
+    color: white;
+  }
+</style>
+
+</head>
+
+<body onload="hideMainUntilCaptcha()">
+<div id="captchaScreen" style="position:fixed; top:0; left:0; width:100%; height:100%; background:#f1fff1; display:flex; justify-content:center; align-items:center; z-index:9999;">
+  <div style="background:white; padding:30px 50px; border-radius:16px; box-shadow:0 8px 30px rgba(0,0,0,0.15); text-align:center; max-width:360px;">
+    <h2 style="color:#2e7d32; margin-bottom: 20px;">Security Check</h2>
+    <p style="font-size:16px; margin-bottom: 12px;">Solve the math problem below to verify you're human:</p>
+    <p id="captchaQuestion" style="font-size: 20px; font-weight: bold; margin-bottom: 10px;"></p>
+    <input type="number" id="captchaAnswer" placeholder="Your Answer" style="padding:10px; width:100%; border:1px solid #ccc; border-radius:6px; text-align:center; font-size:16px;">
+    <div style="margin-top: 18px;">
+      <button onclick="validateModernCaptcha()" style="padding:10px 20px; background:#2e7d32; color:white; border:none; border-radius:8px; cursor:pointer; font-size:16px;">Verify</button>
+    </div>
+    <p id="captchaError" style="color:red; margin-top:10px; display:none;">Incorrect answer. Please try again.</p>
+  </div>
+</div>
+<div id="mainContent" style="display:none;">
+
+<header>
+  <h1 style="text-align: top; font-size: 40px; font-family: Garamond; line-height: 0;"><strong>Ameer Ali Ranjhani</strong></h1>
+<h1 style="font-size: 25px;">Neem Tree Awareness Project</h1>
+<p>Promoting growth, care, and sustainability of Neem trees 🌿</p>
+</header>
+
+<nav>
+  <div class="nav-inner" style="display: flex; justify-content: space-between; align-items: center; width: 100%; max-width: 1100px; margin: auto;">
+
+    <!-- Centered Links -->
+    <div class="nav-links" style="display: flex; justify-content: center; flex: 1; gap: 30px;">
+      <a href="#about">About</a>
+      <a href="#video">Video</a>
+      <a href="#blogs">Blogs</a>
+      <a href="#mission">Mission</a>
+      <a href="#team">Team</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#contact">Contact</a>
+    </div>
+
+    <!-- Right Side Buttons -->
+    <div class="nav-actions" style="display: flex; align-items: center; gap: 12px;">
+      <button id="toggleMode" style="background: none; border: none; font-size: 20px; cursor: pointer;" title="Toggle Theme">
+        <span id="toggleIcon">🌙</span>
+      </button>
+      <button onclick="downloadPDF()" style="background: none; border: none; font-size: 20px; cursor: pointer;" title="Export to PDF">
+        📥
+      </button>
+    </div>
+
+  </div>
+</nav>
+
+<section data-aos="fade-up" data-aos="fade-up" class="section" id="about">
+<h2>About</h2>
+<p>This project is dedicated to spreading awareness about the benefits, growth, and nurturing of Neem trees. Join us as we plant, protect, and promote a greener future for generations to come through education, community engagement, and environmental action.</p>
+</section>
+<section data-aos="fade-up" data-aos="fade-up" class="section" id="video">
+<h2>Our Journey</h2>
+<div class="video-wrapper">
+<video controls="">
+<source src="Neem plant __ How To Grow Neem Tree __ Plant Growing __ Neem __ Amazing video __ Timelapse Videos.mp4" type="video/mp4"/>
+        Your browser does not support the video tag.
+      </video>
+</div>
+</section>
+<section data-aos="fade-up" data-aos="fade-up" class="section" id="gallery">
+<h2>Photo Gallery</h2>
+<img alt="Neem Tree Photo" src="istockphoto-524541622-612x612.jpg" style="width:100%; border-radius:12px;"/>
+</section>
+<section data-aos="fade-up" data-aos="fade-up" class="section" id="blogs">
+<h2>Blogs</h2>
+<ul>
+<li><strong>The Power of Neem:</strong> Discover its medicinal and environmental benefits that have stood the test of time.</li>
+<li><strong>How to Grow Neem at Home:</strong> A step-by-step guide to help you nurture your own Neem tree in your backyard.</li>
+<li><strong>Neem in Traditional Practices:</strong> Dive into the historical and cultural significance of Neem in herbal medicine.</li>
+</ul>
+</section>
+<section data-aos="fade-up" data-aos="fade-up" class="extra-section" id="mission">
+<h3>Our Mission</h3>
+<p>Our mission is to create a green revolution by empowering communities to plant and protect Neem trees, preserving natural health solutions and fighting climate change at a grassroots level.</p>
+</section>
+<section data-aos="fade-up" data-aos="fade-up" class="extra-section" id="team">
+<h3>Our Team</h3>
+<p>We are a diverse group of botanists, environmentalists, educators, and community leaders united by our love for nature and our belief in sustainable living. Together, we build a future rooted in green values.</p>
+</section>
+<section data-aos="fade-up" data-aos="fade-up" class="extra-section" id="stats">
+<h3>Our Impact</h3>
+<div style="display: flex; justify-content: space-around; text-align: center;">
+<div>
+<h1 id="trees">0</h1>
+<p>Trees Planted</p>
+</div>
+<div>
+<h1 id="volunteers">0</h1>
+<p>Volunteers</p>
+</div>
+<div>
+<h1 id="cities">0</h1>
+<p>Cities Covered</p>
+</div>
+</div>
+</section>
+<section data-aos="fade-up" data-aos="fade-up" class="testimonials" id="testimonials">
+<h3>What People Say</h3>
+<blockquote>“This project inspired our entire village to start planting Neem trees. Truly life-changing!” – Ayesha from Punjab</blockquote>
+<blockquote>“The resources shared here helped me grow my first Neem plant at home.” – Kamran, Karachi</blockquote>
+<blockquote>“Their awareness workshops are well-organized and impactful.” – Dr. Fatima, EcoHealers</blockquote>
+</section>
+<section data-aos="fade-up" data-aos="fade-up" class="section" id="map" style="text-align: center;">
+<h2>Our Location</h2>
+<p>Visit our plantation and awareness center at Green Zone, Karachi.</p>
+<div style="margin-top: 20px;">
+
+</div>
+</section>
+<section data-aos="fade-up" data-aos="fade-up" class="section" id="contact">
+<h2>Contact Us</h2>
+<p>
+      📧 Email: <a href="ameerrali552@gmail.com">Ameer Ali</a><br/>
+      📞 Phone: +92 153531486<br/>
+      📍 Location: Green Zone, Karachi, Pakistan
+    </p>
+</section>
+<section data-aos="fade-up" data-aos="fade-up" class="extra-section" id="subscribe">
+<h3 style="text-align: center;">Subscribe for Updates</h3>
+<p style="text-align: center;">Get updates about our Neem tree drives, tips, and success stories!</p>
+<form onsubmit="return false;" style="display: flex; justify-content: center; margin-top: 20px; flex-wrap: wrap; gap: 10px;">
+<input placeholder="Enter your email" required="" style="padding: 12px; width: 280px; max-width: 90%; border: 1px solid #ccc; border-radius: 8px;" type="email"/>
+<button style="padding: 12px 24px; background: var(--green-dark); color: white; border: none; border-radius: 8px; cursor: pointer;" type="submit">
+        Subscribe
+      </button>
+</form>
+</section>
+<footer>
+<p>© 2025 Neem Tree Awareness Project. Created by<strong>Ameer Ali</strong></p>
+<div class="social-icons">
+<a href="#" title="Facebook">🌐</a>
+<a href="#" title="Twitter">🐦</a>
+<a href="#" title="Instagram">📷</a>
+</div>
+
+<section data-aos="fade-up" class="extra-section" id="dashboardLink" style="text-align:center;">
+  <h2>📊 Must Visit the Dashboard</h2>
+  <p>Track the real-time growth and phases of Neem trees with charts and visuals.</p>
+  <a href="Dashboard.html" class="btn" style="display:inline-flex; align-items:center; gap:10px; font-size:16px; padding:12px 24px; border-radius:12px;">
+    <img src="https://img.icons8.com/color/48/combo-chart--v1.png" alt="Dashboard Icon" style="width:24px;height:24px;">
+    Go to Dashboard
+  </a>
+</section>
+
+</footer>
+<button id="backToTop" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">↑</button>
+<script>
+    const toggleBtn = document.getElementById('toggleMode');
+    const iconSpan = document.getElementById('toggleIcon');
+
+    toggleBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+      iconSpan.textContent = document.body.classList.contains('dark') ? '🌞' : '🌙';
+    });
+
+
+function animateValue(id, start, end, duration) {
+  let obj = document.getElementById(id);
+  let range = end - start;
+  let stepTime = Math.abs(Math.floor(duration / range));
+  let current = start;
+  let timer = setInterval(() => {
+    current++;
+    obj.innerText = current;
+    if (current == end) clearInterval(timer);
+  }, stepTime);
+}
+
+window.onload = () => {
+  animateValue("trees", 0, 1325, 1500);
+  animateValue("volunteers", 0, 250, 1000);
+  animateValue("cities", 0, 18, 800);
+};
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script><script>
+function downloadPDF() {
+  const element = document.body;
+  const opt = {
+    margin:       0.5,
+    filename:     'neem_project.pdf',
+    image:        { type: 'jpeg', quality: 0.98 },
+    html2canvas:  { scale: 2 },
+    jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+  };
+  html2pdf().set(opt).from(element).save();
+}
+</script>
+<script>
+  let num1 = Math.floor(Math.random() * 10) + 10;
+  let num2 = Math.floor(Math.random() * 10) + 1;
+  let answer = num1 + num2;
+
+  document.addEventListener("DOMContentLoaded", () => {
+    document.getElementById("captchaQuestion").textContent = num1 + " + " + num2 + " = ?";
+  });
+
+  function hideMainUntilCaptcha() {
+    document.getElementById("mainContent").style.display = "none";
+  }
+
+  function validateModernCaptcha() {
+    const userAnswer = parseInt(document.getElementById("captchaAnswer").value);
+    if (userAnswer === answer) {
+      document.getElementById("captchaScreen").style.display = "none";
+      document.getElementById("mainContent").style.display = "block";
+    } else {
+      document.getElementById("captchaError").style.display = "block";
+    }
+  }
+</script>
+</div>
+<!-- Chatbot Button -->
+<div id="chatbotToggle" onclick="toggleChatbot()" style="position: fixed; bottom: 25px; right: 25px; background: #2e7d32; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 28px; cursor: pointer; box-shadow: 0 4px 10px rgba(0,0,0,0.2); z-index: 10000;">💬</div>
+
+<!-- Chatbot Window -->
+
+
+<!-- Chatbot Window (Completed) -->
+<div id="chatbotWindow" style="display: none; position: fixed; bottom: 100px; right: 25px; width: 320px; max-height: 400px; background: white; border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.15); z-index: 9999; overflow: hidden; display: none; flex-direction: column;">
+  <div style="background: #2e7d32; color: white; padding: 12px; font-weight: bold; text-align: center;">NeemBot 🌿</div>
+  <div id="chatbotMessages" style="flex: 1; padding: 10px; overflow-y: auto; font-size: 14px;"></div>
+  <div style="display: flex; border-top: 1px solid #ccc;">
+    <input type="text" id="chatbotInput" placeholder="Ask something..." style="flex: 1; padding: 10px; border: none; font-size: 14px; outline: none;">
+    <button onclick="sendChatbotMessage()" style="padding: 10px 16px; background: #2e7d32; color: white; border: none; cursor: pointer;">Send</button>
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const chatbotToggle = document.getElementById("chatbotToggle");
+    const chatbotWindow = document.getElementById("chatbotWindow");
+    const chatbotInput = document.getElementById("chatbotInput");
+    const chatbotMessages = document.getElementById("chatbotMessages");
+
+    chatbotToggle.addEventListener("click", () => {
+      chatbotWindow.style.display = chatbotWindow.style.display === "block" ? "none" : "block";
+    });
+
+    chatbotInput.addEventListener("keydown", function(e) {
+      if (e.key === "Enter") sendChatbotMessage();
+    });
+
+    window.sendChatbotMessage = function () {
+      const text = chatbotInput.value.trim();
+      if (!text) return;
+
+      const userDiv = document.createElement("div");
+      userDiv.textContent = "You: " + text;
+      userDiv.style.fontWeight = "bold";
+      chatbotMessages.appendChild(userDiv);
+
+      const botDiv = document.createElement("div");
+      botDiv.textContent = "Bot: " + getBotReply(text);
+      botDiv.style.marginBottom = "10px";
+      chatbotMessages.appendChild(botDiv);
+
+      chatbotInput.value = "";
+      chatbotMessages.scrollTop = chatbotMessages.scrollHeight;
+    };
+
+    function getBotReply(msg) {
+      msg = msg.toLowerCase();
+      if (msg.includes("neem")) return "Neem is a medicinal tree used for centuries.";
+      if (msg.includes("tree")) return "Trees are vital for our ecosystem.";
+      if (msg.includes("care")) return "Neem needs sunlight and occasional watering.";
+      return "I'm NeemBot 🌿. Ask me anything about Neem trees!";
+    }
+  });
+</script>
+
+
+</body>
+
+</html>
